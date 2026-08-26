@@ -86,7 +86,7 @@ className="text-base font-medium text-muted-foreground hover:text-foreground tra
         <div className="hidden md:flex items-center gap-4">
   {/* Download Resume Button */}
 <motion.a
-  href="https://drive.google.com/file/d/1b18LoJ9cwFMAfsz463AQEx8EbJLMcfM1/view?usp=drive_link"
+  href="https://drive.google.com/file/d/1b18LoJ9cwFMAfsz463AQEx8EbJLMcfM1/view?usp=sharing"
   download
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
