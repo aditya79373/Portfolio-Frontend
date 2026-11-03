@@ -14,6 +14,16 @@ const achievements = [
     image:
       "https://res.cloudinary.com/tf0djpnz/image/upload/v1786549394/WhatsApp_Image_2026-08-12_at_9.12.52_PM_bkr2gn.jpg",
   },
+  {
+    title: "Achievement 3",
+    image:
+      "https://res.cloudinary.com/tf0djpnz/image/upload/v1793695743/2410990249_RH124_page-0001_cbxq5u.jpg",
+  },
+  {
+    title: "Achievement 4",
+    image:
+      "https://res.cloudinary.com/tf0djpnz/image/upload/v1793695769/2410990249_RH134_page-0001_ak0u2d.jpg",
+  },
 ];
 
 const Hero = () => {

@@ -7,14 +7,23 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { number: "2", label: "Projects Completed" },
+    { number: "3", label: "Projects Completed" },
     { number: "4+", label: "Technologies Mastered" },
     { number: "100%", label: "Learning Mindset" },
     { number: "∞", label: "Problem Solving" },
   ];
 
   return (
-    <section id="about" className="section-padding relative" ref={ref}>
+    <section
+  id="about"
+  className="section-padding relative"
+  style={{
+    backgroundColor: "#ffffff",
+    backgroundImage: "radial-gradient(rgba(27,128,96,0.25) 1.5px, transparent 1.5px)",
+    backgroundSize: "24px 24px",
+  }}
+  ref={ref}
+>
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -25,15 +34,15 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden relative group">
-              <img
-                src="https://res.cloudinary.com/tf0djpnz/image/upload/v1785999246/photo_mjg16c.jpg"
-                alt="Aditya Patil"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-            </div>
+           <div className="relative w-full max-w-[220px] sm:max-w-[260px] lg:max-w-xs mx-auto">
+  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-4 border-primary shadow-2xl group bg-white">
+    <img
+      src="https://res.cloudinary.com/tf0djpnz/image/upload/c_fill,g_face,ar_4:5,w_800,q_auto,f_auto/v1793693985/Professional_Portrait_in_Navy_Blazer_q3i6dx.png"
+      alt="Aditya Patil"
+      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
+</div>
           </motion.div>
 
           {/* Content Side */}
@@ -95,35 +104,35 @@ const About = () => {
             >
               {stats.map((stat, index) => (
                 <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.5 + index * 0.1,
-                  }}
-                  className="text-center p-4 rounded-xl bg-secondary/50"
-                >
-
-                  {/* Number Area */}
-                  <div className="h-10 md:h-12 flex items-center justify-center">
-                   <span
-  className={`font-heading text-gradient ${
-    stat.number === "∞"
-      ? "text-4xl md:text-6xl font-normal leading-none"
-      : "text-2xl md:text-3xl font-bold leading-none"
-  }`}
+  key={stat.label}
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+  transition={{
+    duration: 0.5,
+    delay: 0.5 + index * 0.1,
+  }}
+  className="text-center p-4 rounded-xl bg-primary shadow-lg"
 >
-  {stat.number}
-</span>
-                  </div>
 
-                  {/* Label */}
-               <p className="text-xs text-muted-foreground mt-1 text-center">
-  {stat.label}
-</p>
+  {/* Number Area */}
+  <div className="h-10 md:h-12 flex items-center justify-center">
+    <span
+      className={`font-heading text-white ${
+        stat.number === "∞"
+          ? "text-4xl md:text-6xl font-normal leading-none"
+          : "text-2xl md:text-3xl font-bold leading-none"
+      }`}
+    >
+      {stat.number}
+    </span>
+  </div>
 
-                </motion.div>
+  {/* Label */}
+  <p className="text-xs text-white/80 mt-1 text-center">
+    {stat.label}
+  </p>
+
+</motion.div>
               ))}
             </motion.div>
 

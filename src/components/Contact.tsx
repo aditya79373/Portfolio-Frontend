@@ -98,7 +98,7 @@ const [sent, setSent] = useState(false);
 
 
   return (
-    <section id="contact" className="section-padding bg-secondary/90" ref={ref}>
+   <section id="contact" className="section-padding bg-hero" ref={ref}>
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Side */}

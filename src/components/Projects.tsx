@@ -23,6 +23,16 @@ const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB", "OpenAI"],
     link: "https://medisynncare24.netlify.app/",
   },
+    {
+    title: "EasyAPI",
+    category: "API Management System",
+    description:
+      "A modern API management platform to test requests, track usage stats, and collaborate with your team through role-based workspaces, with secure authentication and a clean, responsive dashboard.",
+    image:
+      "https://res.cloudinary.com/tf0djpnz/image/upload/v1793694359/Neon_API_Management_Dashboard_bkcavg.png",
+    tags: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
+    link: "https://easyapi-euv0.onrender.com/",
+  },
 ];
 
 // Same backend as Contact.tsx
@@ -142,7 +152,16 @@ const Projects = () => {
   };
 
   return (
-    <section id="work" className="section-padding" ref={ref}>
+    <section
+  id="work"
+  className="section-padding"
+  style={{
+    backgroundColor: "#ffffff",
+    backgroundImage: "radial-gradient(rgba(27,128,96,0.25) 1.5px, transparent 1.5px)",
+    backgroundSize: "24px 24px",
+  }}
+  ref={ref}
+>
       <div className="container-custom">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
