@@ -86,7 +86,7 @@ className="text-base font-medium text-muted-foreground hover:text-foreground tra
         <div className="hidden md:flex items-center gap-4">
   {/* Download Resume Button */}
 <motion.a
-  href="https://drive.google.com/file/d/1b18LoJ9cwFMAfsz463AQEx8EbJLMcfM1/view?usp=sharing"
+  href="https://drive.google.com/file/d/11C3VKl6oxuDB09OiH09K0u2WVKZIscYl/view?usp=drive_link"
   download
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
@@ -161,7 +161,7 @@ className="text-base font-medium text-muted-foreground hover:text-foreground tra
 
               <div className="flex flex-col gap-4 pt-4 border-t border-border">
                 <a
-                  href="https://drive.google.com/file/d/1b18LoJ9cwFMAfsz463AQEx8EbJLMcfM1/view?usp=sharing"
+                  href="https://drive.google.com/file/d/11C3VKl6oxuDB09OiH09K0u2WVKZIscYl/view?usp=drive_link"
                   download
                   onClick={() => setMobileMenuOpen(false)}
                   className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full border border-primary text-primary text-sm font-medium transition-all"
