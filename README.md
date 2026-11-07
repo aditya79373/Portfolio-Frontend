@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Portfolio Frontend
 
-## Project info
+My personal portfolio website. It showcases my projects, achievements and skills, and lets visitors contact me or request access to project code.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live site:** https://aditya-patil-portfolio.onrender.com/
 
-## How can I edit this code?
+The server lives in a separate repository: **Portfolio-Backend**.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Projects showcase** with details and links.
+- **Achievements modal** with a lightbox to view certificates and photos.
+- **Contact form** that sends me an email through the backend.
+- **Request Code Access** modal for visitors who want to see a project's source code.
+- **Smooth animations** with Framer Motion.
+- **Light and dark themes**.
+- **Responsive layout** with a mobile hamburger menu.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech stack
 
-Changes made via Lovable will be committed automatically to this repo.
+| Area | Tools |
+| --- | --- |
+| UI | React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui (Radix UI), lucide-react, react-icons, sonner |
+| Animation | Framer Motion |
+| Routing and data | React Router, TanStack Query, React Hook Form, Zod |
+| Charts | Recharts |
+| Testing and linting | Vitest, Testing Library, ESLint |
+| Package manager | npm |
 
-**Use your preferred IDE**
+## Getting started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (LTS)
+- npm (comes with Node.js)
+- The Portfolio backend running (see the **Portfolio-Backend** repository)
 
-Follow these steps:
+### Clone
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+git clone https://github.com/aditya79373/Portfolio-Frontend.git
+cd Portfolio-Frontend
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Install and run
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open the URL Vite prints (usually http://localhost:5173).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Environment variables
 
-**Use GitHub Codespaces**
+Create a `.env` file in the project root:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```env
+VITE_API_URL=http://localhost:5000
+```
 
-## What technologies are used for this project?
+For production, point `VITE_API_URL` at your deployed backend URL (https://backend-arjv.onrender.com).
 
-This project is built with:
+### Build for the web
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run build
+npm run preview       # optional: preview the production build
+```
 
-## How can I deploy this project?
+## Scripts
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+| Script | What it does |
+| --- | --- |
+| `dev` | Start the Vite dev server |
+| `build` | Production build |
+| `build:dev` | Development-mode build |
+| `preview` | Preview the production build |
+| `lint` | Run ESLint |
+| `test` | Run the tests once |
+| `test:watch` | Run the tests in watch mode |
 
-## Can I connect a custom domain to my Lovable project?
+## Notes
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Do not commit `.env` files.
+- The backend runs on Render's free tier, so the first contact form submit after a while can take 30-60 seconds.
